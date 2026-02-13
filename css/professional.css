@@ -1,0 +1,618 @@
+/* ================================================
+   STEPHANIE HOLLAND - PROFESSIONAL PORTFOLIO
+   Modern, clean design for GTM consultant/author
+   ================================================ */
+
+/* === CSS VARIABLES === */
+:root {
+  /* Brand Colors */
+  --brand-navy: #1b1b3a;
+  --brand-cream: #fbf7f1;
+  --brand-pink: #f44e70;
+  --brand-blue: #20A4F3;
+
+  /* Typography */
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Container */
+  --container-max: 1140px;
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+}
+
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--brand-navy);
+  background-color: var(--brand-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* === TYPOGRAPHY === */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--brand-navy);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--brand-navy);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--brand-pink);
+}
+
+/* === NAVIGATION === */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(251, 247, 241, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(27, 27, 58, 0.1);
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 0;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--brand-navy);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.logo:hover {
+  color: var(--brand-pink);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brand-navy);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--brand-pink);
+}
+
+.btn-nav {
+  padding: 0.5rem 1.5rem;
+  background: var(--brand-pink);
+  color: white !important;
+  border-radius: 50px;
+}
+
+.btn-nav:hover {
+  background: var(--brand-blue);
+  transform: translateY(-2px);
+}
+
+/* === BUTTONS === */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--brand-pink);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--brand-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(244, 78, 112, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--brand-navy);
+  border: 2px solid var(--brand-navy);
+}
+
+.btn-secondary:hover {
+  background: var(--brand-navy);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+/* === HERO SECTION === */
+.hero {
+  padding: 10rem 0 6rem;
+  background: linear-gradient(135deg, var(--brand-cream) 0%, rgba(32, 164, 243, 0.05) 100%);
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: white;
+  color: var(--brand-pink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  border: 2px solid var(--brand-pink);
+}
+
+.hero-title {
+  margin-bottom: 1.5rem;
+  color: var(--brand-navy);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--brand-navy);
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* === CREDENTIALS BAR === */
+.credentials {
+  padding: 3rem 0;
+  background: white;
+  border-top: 1px solid rgba(27, 27, 58, 0.1);
+  border-bottom: 1px solid rgba(27, 27, 58, 0.1);
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  text-align: center;
+}
+
+.credential-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-pink);
+  margin-bottom: 0.5rem;
+}
+
+.credential-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--brand-navy);
+  opacity: 0.8;
+}
+
+/* === SECTION STYLING === */
+section {
+  padding: var(--space-xl) 0;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+}
+
+.section-header.center {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 0.35rem 0.875rem;
+  background: rgba(244, 78, 112, 0.1);
+  color: var(--brand-pink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: var(--brand-navy);
+  opacity: 0.8;
+}
+
+/* === ABOUT SECTION === */
+.about {
+  background: white;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.highlight-card {
+  padding: 2rem;
+  background: var(--brand-cream);
+  border-radius: 12px;
+  border: 2px solid rgba(244, 78, 112, 0.1);
+}
+
+.highlight-card h3 {
+  font-size: 1.125rem;
+  color: var(--brand-pink);
+  margin-bottom: 1rem;
+}
+
+.highlight-card ul {
+  list-style: none;
+}
+
+.highlight-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.9375rem;
+}
+
+.highlight-card li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--brand-blue);
+  font-weight: 600;
+}
+
+/* === EXPERTISE SECTION === */
+.expertise {
+  background: var(--brand-cream);
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.expertise-card {
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  transition: var(--transition);
+  border: 2px solid rgba(27, 27, 58, 0.05);
+}
+
+.expertise-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(27, 27, 58, 0.1);
+  border-color: var(--brand-pink);
+}
+
+.expertise-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.expertise-card h3 {
+  margin-bottom: 1rem;
+  color: var(--brand-navy);
+}
+
+.expertise-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--brand-navy);
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+
+/* === WORK SECTION === */
+.work {
+  background: white;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.work-item {
+  padding: 2rem;
+  border-left: 4px solid var(--brand-pink);
+  background: var(--brand-cream);
+  transition: var(--transition);
+}
+
+.work-item:hover {
+  border-color: var(--brand-blue);
+  transform: translateX(8px);
+}
+
+.work-category {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand-pink);
+  margin-bottom: 0.75rem;
+}
+
+.work-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.work-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* === CONTACT SECTION === */
+.contact {
+  background: linear-gradient(135deg, var(--brand-navy) 0%, rgba(27, 27, 58, 0.95) 100%);
+  color: white;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.contact-text .section-badge {
+  background: rgba(244, 78, 112, 0.2);
+  color: var(--brand-pink);
+}
+
+.contact-text h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.contact-text p {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-cta {
+  text-align: center;
+}
+
+.contact-note {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* === FOOTER === */
+.footer {
+  padding: 4rem 0 2rem;
+  background: var(--brand-navy);
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.footer-left p {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--brand-pink);
+}
+
+.footer-bottom {
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  opacity: 0.6;
+  margin: 0;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Simple mobile - would add hamburger menu in production */
+  }
+
+  .hero {
+    padding: 8rem 0 4rem;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}

@@ -5,8 +5,8 @@
 
 /* Tanay gets a special tropical-chaos theme */
 .tanay-page {
-  --accent-1: #ff00ff;
-  --accent-2: #00ffff;
+  --accent-1: #f44e70;
+  --accent-2: #20A4F3;
   --accent-3: #ffff00;
 }
 
@@ -27,7 +27,7 @@
 .tanay-header .subtitle {
   font-family: 'Rubik Glitch', system-ui;
   font-size: clamp(14px, 3vw, 22px);
-  color: var(--neon-yellow);
+  color: var(--brand-blue);
 }
 
 /* Profile pic - generates a fun avatar since we don't have a real photo */
@@ -35,7 +35,7 @@
   width: 200px;
   height: 200px;
   margin: 0 auto;
-  background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);
+  background: linear-gradient(135deg, #f44e70, #20A4F3, #ffff00);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -43,9 +43,9 @@
   font-size: 100px;
   border: 5px solid gold;
   box-shadow:
-    0 0 20px var(--neon-pink),
-    0 0 40px var(--neon-blue),
-    0 0 60px var(--neon-pink);
+    0 0 20px var(--brand-pink),
+    0 0 40px var(--brand-blue),
+    0 0 60px var(--brand-pink);
   animation: avatar-pulse 2s ease-in-out infinite alternate;
   position: relative;
 }
@@ -53,16 +53,16 @@
 @keyframes avatar-pulse {
   0% {
     box-shadow:
-      0 0 20px var(--neon-pink),
-      0 0 40px var(--neon-blue),
-      0 0 60px var(--neon-pink);
+      0 0 20px var(--brand-pink),
+      0 0 40px var(--brand-blue),
+      0 0 60px var(--brand-pink);
     transform: scale(1);
   }
   100% {
     box-shadow:
-      0 0 30px var(--neon-blue),
-      0 0 60px var(--neon-pink),
-      0 0 90px var(--neon-blue);
+      0 0 30px var(--brand-blue),
+      0 0 60px var(--brand-pink),
+      0 0 90px var(--brand-blue);
     transform: scale(1.05);
   }
 }
@@ -92,15 +92,15 @@
 }
 
 .cert-badge.lindy {
-  background: rgba(0, 255, 255, 0.2);
-  border-color: #00ffff;
-  color: #00ffff;
+  background: rgba(32, 164, 243, 0.2);
+  border-color: #20A4F3;
+  color: #20A4F3;
 }
 
 .cert-badge.bots {
-  background: rgba(255, 0, 255, 0.2);
-  border-color: #ff00ff;
-  color: #ff66ff;
+  background: rgba(244, 78, 112, 0.2);
+  border-color: #f44e70;
+  color: #f44e70;
 }
 
 .cert-badge.accenture {
@@ -137,10 +137,10 @@
   width: 3px;
   background: repeating-linear-gradient(
     180deg,
-    var(--neon-pink) 0px,
-    var(--neon-pink) 10px,
-    var(--neon-blue) 10px,
-    var(--neon-blue) 20px,
+    var(--brand-pink) 0px,
+    var(--brand-pink) 10px,
+    var(--brand-blue) 10px,
+    var(--brand-blue) 20px,
     var(--neon-green) 20px,
     var(--neon-green) 30px
   );
@@ -150,8 +150,8 @@
   margin-left: 40px;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px dashed var(--neon-pink);
-  background: rgba(255, 0, 255, 0.05);
+  border: 1px dashed var(--brand-pink);
+  background: rgba(244, 78, 112, 0.05);
   position: relative;
 }
 
@@ -166,19 +166,19 @@
 .timeline-item h4 {
   font-family: var(--silkscreen);
   font-size: 11px;
-  color: var(--neon-yellow);
+  color: var(--brand-pink);
   margin-bottom: 4px;
 }
 
 .timeline-item .timeline-company {
   font-family: var(--comic-sans);
-  color: var(--neon-blue);
+  color: var(--brand-blue);
   font-size: 13px;
 }
 
 .timeline-item .timeline-desc {
   font-family: var(--comic-sans);
-  color: #ccccff;
+  color: var(--brand-black);
   font-size: 12px;
   margin-top: 4px;
 }
